@@ -45,7 +45,7 @@ Key Excel dashboards and tables were created to support insight generation and s
 <img width="375" height="300" alt="image" src="https://github.com/user-attachments/assets/b5edc711-638a-4d57-8ebf-59e84b01a18b" />
 
 ## 💡 Key Insights
-- HealthMax Market Value Forecast represents **gross sales at market priceS**, while Net Sales prediction reflect **realized revenues after discounds and promotional effects, as well as integration of 2 new products**
-- Net revenue performance is dirven by **product mix, value contribution, and profitability**, with clear trade-offs between scale and margin.
+- HealthMax Market Value Forecast represents **gross sales at market prices**, while Net Sales prediction reflects **realized revenues after discounts and promotional effects, as well as integration of 2 new products**
+- Net revenue performance is driven by **product mix, value contribution, and profitability**, with clear trade-offs between scale and margin.
 - Certain HealthMax products demonstrate higher profitability despite lower overall scale, highlighting opportunities for targeted investment.
 - Scenario-based analysis shows **incremental net sales upside** from potential product launches, including **Organic shampoo** and **new 50 ml formats**, supporting FP&A-style planning and prioritization.
