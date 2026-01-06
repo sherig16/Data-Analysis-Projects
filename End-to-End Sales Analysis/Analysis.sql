@@ -21,7 +21,7 @@ WHERE "Country" IS NULL
 -- For price: Using the dataset price average
 
 UPDATE public."Sales_Data"
-SET "Quantity_purchased" = 3 -- Assumption: Missing quantity for a single transaction is set to 3 based on the provided context
+SET "Quantity_purchased" = 3 
 WHERE "Transaction_ID" = '00a30472-89a0-4688-9d33-67ea8ccf7aea';
 
 UPDATE public."Sales_Data"
