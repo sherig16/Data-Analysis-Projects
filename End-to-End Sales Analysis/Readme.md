@@ -31,8 +31,7 @@ An interactive Power BI dashboard was built to visualize key sales and profit in
 - PostgreSQL (data loading, cleaning, transformation, aggregation, ETL logic, business queries)
 - Power BI (dashboarding and visualization)
 
-<img width="582" height="319" alt="Screenshot 2026-01-06 000707" src="https://github.com/user-attachments/assets/32e4c218-05bf-4a79-ab66-77de4e87d2da" />
-
+<img width="584" height="321" alt="image" src="https://github.com/user-attachments/assets/95aa3af9-6cec-4121-b420-7b1cd57f1047" />
 
 ## 💡 Key Insights
 - Monthly sales show clear seasonality, with a noticeable increase toward year-end, suggesting higher demand during the holiday period and supporting time-based planning and inventory decisions.
