@@ -1,5 +1,4 @@
 -- Combine country-level datasets into a unified table
-
 CREATE TABLE public."Sales_Data" AS
 SELECT * FROM public."Sales_Canada"
 UNION ALL SELECT * FROM public."Sales_China"
@@ -9,7 +8,6 @@ UNION ALL SELECT * FROM public."Sales_UK"
 UNION ALL SELECT * FROM public."Sales_US";
 
 -- Data Quality Checks: Identify critical null values
-
 SELECT *
 FROM public."Sales_Data"
 WHERE "Country" IS NULL
@@ -35,14 +33,12 @@ SET "Price_Per_Unit" = (
 WHERE "Transaction_ID" = '001898f7-b696-4356-91dc-8f2b73d09c63';
 
 -- Duplicate check on transaction IDs
-
 SELECT "Transaction_ID", COUNT(*)
 FROM public."Sales_Data"
 GROUP BY "Transaction_ID"
 HAVING COUNT(*) > 1;
 
--- Create Key Performance Indicator metrics
-
+-- Create Key Performance Indicator Metrics
 ALTER TABLE public."Sales_Data"
 ADD COLUMN "Total_amount_spent" NUMERIC(10,2);
 
@@ -50,12 +46,14 @@ UPDATE public."Sales_Data"
 SET "Total_amount_spent" =
     ("Price_Per_Unit" * "Quantity_purchased") - "Discount_applied";
 
+
 ALTER TABLE public."Sales_Data"
 ADD COLUMN "Profit" NUMERIC(10,2);
 
 UPDATE public."Sales_Data"
 SET "Profit" =
     "Total_amount_spent" - ("Cost_price" * "Quantity_purchased");
+
 
 -- Business Analysis Queries (December 1–25, 2025):
 
