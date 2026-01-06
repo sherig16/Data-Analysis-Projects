@@ -30,7 +30,7 @@ The analysis is organized into three phases:
 - Contribution, profitability, and growth trade-off analysis
 - High-level planning and forecast-oriented logic
 
-## 🔍 Analysis Approach
+## 🛠️ Tools Used
 - Tables & Pivot Tables & Pivot Charts 
 - 'SUMIFS', 'COUNTIFS', 'VLOOKUP'
 - 'IF' logic and calculated fields
