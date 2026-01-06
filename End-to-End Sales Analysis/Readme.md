@@ -10,15 +10,15 @@ Using SQL aggregation queries, the project answers key business questions, inclu
 - Top-performing sales representatives
 - Store locations generating the highest revenue and profit
 - Summary sales and profit statistics for the selected period
-  
-## 🔧 Data Preparation & Cleaning (SQL)
+
+## 🔍 Analysis Approach
+
 Key data preparation steps performed in PostgreSQL:
 - Combining country-level datasets into a unified table
 - Identifying and handling null values in critical fields
 - Imputing missing quantities using a documented assumption and filling missing unit prices using the dataset average
 - Creating derived transaction-level metrics for revenue and profit
 
-## 📈 Power BI Dashboard
 An interactive Power BI dashboard was built to visualize key sales and profit insights, featuring:
 - Executive KPI cards (Sales, Profit, Orders, Discounts, AOV)
 - Monthly sales trends
@@ -35,4 +35,6 @@ An interactive Power BI dashboard was built to visualize key sales and profit in
 
 
 ## 💡 Key Insights
-- 
+- Monthly sales show clear seasonality, with a noticeable increase toward year-end, suggesting higher demand during the holiday period and supporting time-based planning and inventory decisions.
+- Monthly sales show clear seasonality, with a noticeable increase toward year-end, suggesting higher demand during the holiday period and supporting time-based planning and inventory decisions.
+- Discounting does not uniformly increase profitability — higher discount levels are associated with mixed profit outcomes across countries, indicating the need for more targeted discount strategies.
