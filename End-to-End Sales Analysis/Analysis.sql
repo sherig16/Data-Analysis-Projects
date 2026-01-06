@@ -16,9 +16,9 @@ WHERE "Country" IS NULL
    OR "Cost_price" IS NULL
    OR "Discount_applied" IS NULL;
 
--- Handle Null values: 
--- For quantity: Missing quantity for a single transaction is set to 3 based on the provided context
--- For price: Using the dataset price average
+-- Handle Null values (documented assumptions):
+-- Quantity: one known missing value set to 3 for a specific Transaction_ID (single-record correction)
+-- Price: one missing value filled using the overall average Price_Per_Unit (simple imputation)
 
 UPDATE public."Sales_Data"
 SET "Quantity_purchased" = 3 
@@ -38,7 +38,9 @@ FROM public."Sales_Data"
 GROUP BY "Transaction_ID"
 HAVING COUNT(*) > 1;
 
--- Create Key Performance Indicator Metrics
+-- Create Key Performance Indicator Metrics:
+
+-- Create total_amount_spent column
 ALTER TABLE public."Sales_Data"
 ADD COLUMN "Total_amount_spent" NUMERIC(10,2);
 
@@ -46,7 +48,7 @@ UPDATE public."Sales_Data"
 SET "Total_amount_spent" =
     ("Price_Per_Unit" * "Quantity_purchased") - "Discount_applied";
 
-
+-- Create Profit column
 ALTER TABLE public."Sales_Data"
 ADD COLUMN "Profit" NUMERIC(10,2);
 
@@ -94,7 +96,7 @@ GROUP BY "Store_location"
 ORDER BY "Revenue" DESC
 LIMIT 5;
 
--- Summary statistics (KPIs) for the time period
+-- Summary statistics for revenue and profit (Dec 1–25)
 SELECT
     MIN("Total_amount_spent") AS "Min_revenue",
     MAX("Total_amount_spent") AS "Max_revenue",
